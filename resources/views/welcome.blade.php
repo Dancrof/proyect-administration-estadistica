@@ -29,7 +29,7 @@
                     <div class="mt-5 max-w-2xl text-center mx-auto">
                         <h1 class="block font-bold text-gray-800 text-4xl md:text-5xl lg:text-6xl dark:text-neutral-200">
                        Digitalizacion y Gestion de Documentos de la Direccion de Carrera
-                        <span class="bg-clip-text bg-gradient-to-tl from-blue-600 to-violet-600 text-transparent animate-pulse">{{env('APP_NAME', 'Laravel')}}</span>
+                        <span class="bg-clip-text bg-gradient-to-tl from-blue-600 to-violet-600 text-transparent animate-pulse">{{config('app.name', 'Laravel')}}</span>
                         </h1>
                     </div>
                     <!-- End Title -->
