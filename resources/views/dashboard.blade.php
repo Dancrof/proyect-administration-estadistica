@@ -26,8 +26,12 @@
                     <ul class="list-disc list-inside text-gray-800 dark:text-white mt-4">
                         <x-li-social-component icon="tabler-brand-discord" :url="'https://discord.com/invite/meZU65c67e'" :title="'Únete a nuestro Discord'" />
                     </ul>
+                    <div>
+                        <livewire:pages.documents.list-document-user />
+                    </div>
+   
                 </div>
-
+                
             </div>
         </div>
     </div>
