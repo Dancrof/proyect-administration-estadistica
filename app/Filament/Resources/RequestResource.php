@@ -32,8 +32,14 @@ class RequestResource extends Resource
                ->schema([
                     Forms\Components\Textarea::make('Description')
                     ->label("Descripcion")
+                    ->reactive()
                     ->minLength(2)
                     ->maxLength(255)
+                    ->helperText(function ($get) {
+                        $maxLength = 255;
+                        $remaining = $maxLength - strlen($get('Description') ?? '');
+                        return "Caracteres Maximos: $remaining"."/255";
+                    })                   
                     ->required(),                                 
                ]),
                Section::make("Usuario y Estado Asignado")
@@ -88,13 +94,13 @@ class RequestResource extends Resource
                 ])
             ])
             ->actions([
-                Tables\Actions\EditAction::make(),
-                Tables\Actions\DeleteAction::make(),
+                Tables\Actions\EditAction::make()->label("editar"),
+                Tables\Actions\DeleteAction::make()->label("borrar"),
             ])
             ->bulkActions([
                 Tables\Actions\BulkActionGroup::make([
-                    Tables\Actions\DeleteBulkAction::make(),
-                ]),
+                    Tables\Actions\DeleteBulkAction::make()->label("borrar seleccionados"),
+                ])->label("acciones"),
             ]);
     }
 
@@ -109,8 +115,8 @@ class RequestResource extends Resource
     {
         return [
             'index' => Pages\ListRequests::route('/'),
-            'create' => Pages\CreateRequest::route('/create'),
-            'edit' => Pages\EditRequest::route('/{record}/edit'),
+            //'create' => Pages\CreateRequest::route('/create'),
+            //'edit' => Pages\EditRequest::route('/{record}/editar'),
         ];
     }
 }

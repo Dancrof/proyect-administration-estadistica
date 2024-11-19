@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>Laravel</title>
+        <title>UTELVT</title>
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.bunny.net">
@@ -28,8 +28,8 @@
                     <!-- Title -->
                     <div class="mt-5 max-w-2xl text-center mx-auto">
                         <h1 class="block font-bold text-gray-800 text-4xl md:text-5xl lg:text-6xl dark:text-neutral-200">
-                        La plantilla de Laravel
-                        <span class="bg-clip-text bg-gradient-to-tl from-blue-600 to-violet-600 text-transparent animate-pulse">Definitiva</span>
+                       Digitalizacion y Gestion de Documentos de la Direccion de Carrera
+                        <span class="bg-clip-text bg-gradient-to-tl from-blue-600 to-violet-600 text-transparent animate-pulse">{{env('APP_NAME', 'Laravel')}}</span>
                         </h1>
                     </div>
                     <!-- End Title -->
@@ -39,11 +39,11 @@
                     <!-- Buttons -->
                     <div class="mt-8 gap-3 flex justify-center">
                         <a type="button" href="/login" class="cursor-pointer py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-transparent bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:bg-blue-700 disabled:opacity-50 disabled:pointer-events-none">
-                            Login
+                            Iniciar Sesion
                             <x-tabler-brand-youtube />
                           </a>
                           <a type="button" href="/register" class="cursor-pointer py-3 px-4 inline-flex items-center gap-x-2 text-sm font-medium rounded-lg border border-gray-200 bg-white text-gray-800 shadow-sm hover:bg-gray-50 focus:outline-none focus:bg-gray-50 disabled:opacity-50 disabled:pointer-events-none dark:bg-neutral-800 dark:border-neutral-700 dark:text-white dark:hover:bg-neutral-700 dark:focus:bg-neutral-700">
-                            Register
+                            Registrarse
                             <x-tabler-mood-plus />
 
                           </a>

@@ -74,6 +74,7 @@ class DocumentResource extends Resource
                 Tables\Columns\TextColumn::make('name')
                     ->searchable(),
                 Tables\Columns\TextColumn::make('url_address')
+                    ->hidden(true)
                     ->searchable(),
                 Tables\Columns\TextColumn::make('user.name')
                     ->numeric()
